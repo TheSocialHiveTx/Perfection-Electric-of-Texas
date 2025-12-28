@@ -1,0 +1,7 @@
+{
+  "name": "Perfection Electric of Texas - Lead Gen WaaS",
+  "description": "A high-converting, mobile-first, phone-call focused lead generation website for a professional electrician service in Houston, TX.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

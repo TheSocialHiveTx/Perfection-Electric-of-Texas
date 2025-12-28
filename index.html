@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfection Electric of Texas | Houston's Trusted 24/7 Electrician</title>
+    <meta name="description" content="Need a licensed electrician in Houston? Perfection Electric of Texas offers 24/7 electrical repairs, panel upgrades, and emergency services. Call (713) 530-0865 now.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-brand-yellow { background-color: #F59E0B; }
+        .text-brand-yellow { color: #F59E0B; }
+        .border-brand-yellow { border-color: #F59E0B; }
+        
+        /* Smooth transition for header */
+        #main-header { transition: all 0.3s ease; }
+        .header-scrolled { 
+            background-color: rgba(15, 23, 42, 0.95); 
+            backdrop-filter: blur(8px);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        /* FAQ Animation */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .faq-item.active .faq-content {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Custom Hover Effects */
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        
+        /* Fix for potential SVG scaling issues in some browsers */
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-3 bg-white/80 backdrop-blur-sm">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="bg-brand-yellow p-1 rounded-md shadow-sm">
+                    <svg class="text-slate-900 w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <span id="logo-text" class="font-extrabold text-base leading-tight uppercase tracking-tighter text-slate-900">
+                        Perfection Electric
+                    </span>
+                    <span id="logo-subtext" class="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">
+                        of Texas
+                    </span>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-6">
+                <a href="#services" class="nav-link text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-brand-yellow transition-colors">Services</a>
+                <a href="#areas" class="nav-link text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-brand-yellow transition-colors">Areas</a>
+                <a href="#faq" class="nav-link text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-brand-yellow transition-colors">FAQ</a>
+            </nav>
+
+            <a href="tel:7135300865" class="flex items-center space-x-2 bg-brand-yellow hover:bg-yellow-500 text-slate-900 px-4 py-2 rounded-full font-bold text-sm transition-all shadow-sm active:scale-95">
+                <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="hidden sm:inline">(713) 530-0865</span>
+                <span class="sm:hidden uppercase text-[10px]">Call</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-24 pb-12 lg:pt-40 lg:pb-24 overflow-hidden bg-white">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-brand-yellow/5 rounded-full blur-3xl lg:w-96 lg:h-96"></div>
+            
+            <div class="container mx-auto px-4 relative">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="inline-flex items-center space-x-2 bg-yellow-50 px-2.5 py-1 rounded-full mb-4 border border-yellow-100">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                        </span>
+                        <span class="text-yellow-800 text-[9px] font-bold uppercase tracking-widest">Live 24/7 Support</span>
+                    </div>
+
+                    <h1 class="text-3xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-4 leading-[1.15] tracking-tight">
+                        Professional Electrician <br class="hidden md:block" />
+                        <span class="text-brand-yellow">Services in Houston</span>
+                    </h1>
+                    
+                    <p class="text-base md:text-xl text-slate-600 mb-8 max-w-xl mx-auto leading-relaxed px-2">
+                        Fast, safe, and reliable electrical solutions for Houston homes and businesses. We keep your power on when it matters most.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
+                        <a href="tel:7135300865" class="w-full sm:w-auto bg-slate-900 text-white hover:bg-slate-800 px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-slate-200 transition-all active:scale-95 flex items-center justify-center gap-2">
+                            Call (713) 530-0865
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto bg-white border border-slate-200 text-slate-600 hover:border-brand-yellow px-8 py-4 rounded-xl font-bold text-base transition-all">
+                            Our Services
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6 border-t border-slate-50 max-w-2xl mx-auto">
+                        <div class="flex items-center justify-center space-x-2 text-slate-500 text-sm font-semibold">
+                            <svg class="text-brand-yellow w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2 text-slate-500 text-sm font-semibold">
+                            <svg class="text-brand-yellow w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>24/7 Availability</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2 text-slate-500 text-sm font-semibold">
+                            <svg class="text-brand-yellow w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                            <span>Houston Local</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Strip -->
+        <div class="bg-slate-900 py-2.5 border-y border-slate-800 overflow-hidden">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-12 text-center">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="flex text-brand-yellow">
+                        <svg class="w-3 h-3 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-3 h-3 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-3 h-3 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-3 h-3 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-3 h-3 text-brand-yellow/30 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">3.9/5 Star Local Expert</span>
+                </div>
+                <div class="hidden md:block h-3 w-[1px] bg-slate-700"></div>
+                <div class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">
+                    Serving Southeast Houston & Surrounding Areas
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-10 px-4">
+                    <h2 class="text-blue-600 font-bold tracking-widest uppercase text-[10px] mb-2">Capabilities</h2>
+                    <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900">Expert Electrical Care</h3>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover-lift group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 bg-red-50 text-red-600">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h4 class="text-sm md:text-lg font-bold text-slate-900 mb-1 leading-tight">Emergency Repairs</h4>
+                        <p class="text-[11px] md:text-sm text-slate-500 leading-tight mb-3">24/7 response for sparks or outages.</p>
+                        <a href="tel:7135300865" class="mt-auto text-[9px] md:text-xs font-black uppercase text-brand-yellow hover:underline">Call Now</a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover-lift group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 bg-yellow-50 text-yellow-600">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <h4 class="text-sm md:text-lg font-bold text-slate-900 mb-1 leading-tight">Panel Upgrades</h4>
+                        <p class="text-[11px] md:text-sm text-slate-500 leading-tight mb-3">Modernize for high-demand loads.</p>
+                        <a href="tel:7135300865" class="mt-auto text-[9px] md:text-xs font-black uppercase text-brand-yellow hover:underline">Call Now</a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover-lift group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 bg-blue-50 text-blue-600">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <h4 class="text-sm md:text-lg font-bold text-slate-900 mb-1 leading-tight">Home Wiring</h4>
+                        <p class="text-[11px] md:text-sm text-slate-500 leading-tight mb-3">New builds and historic rewiring.</p>
+                        <a href="tel:7135300865" class="mt-auto text-[9px] md:text-xs font-black uppercase text-brand-yellow hover:underline">Call Now</a>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover-lift group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 bg-orange-50 text-orange-600">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        </div>
+                        <h4 class="text-sm md:text-lg font-bold text-slate-900 mb-1 leading-tight">Lighting</h4>
+                        <p class="text-[11px] md:text-sm text-slate-500 leading-tight mb-3">Indoor & outdoor LED solutions.</p>
+                        <a href="tel:7135300865" class="mt-auto text-[9px] md:text-xs font-black uppercase text-brand-yellow hover:underline">Call Now</a>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover-lift group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 bg-indigo-50 text-indigo-600">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="2"/><line x1="15" y1="22" x2="15" y2="2"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                        </div>
+                        <h4 class="text-sm md:text-lg font-bold text-slate-900 mb-1 leading-tight">Commercial</h4>
+                        <p class="text-[11px] md:text-sm text-slate-500 leading-tight mb-3">Reliable service for businesses.</p>
+                        <a href="tel:7135300865" class="mt-auto text-[9px] md:text-xs font-black uppercase text-brand-yellow hover:underline">Call Now</a>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover-lift group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 bg-emerald-50 text-emerald-600">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h4 class="text-sm md:text-lg font-bold text-slate-900 mb-1 leading-tight">Inspections</h4>
+                        <p class="text-[11px] md:text-sm text-slate-500 leading-tight mb-3">Safety audits and compliance.</p>
+                        <a href="tel:7135300865" class="mt-auto text-[9px] md:text-xs font-black uppercase text-brand-yellow hover:underline">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <div class="w-full lg:flex-1 relative order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800" alt="Electrician Work" class="rounded-3xl shadow-lg w-full object-cover aspect-video lg:aspect-auto">
+                        <div class="absolute -bottom-4 -right-4 bg-brand-yellow px-6 py-4 rounded-2xl shadow-xl hidden md:block">
+                            <p class="text-slate-900 font-black text-3xl">100%</p>
+                            <p class="text-slate-800 font-bold uppercase text-[10px]">Safety First</p>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 order-1 lg:order-2">
+                        <h2 class="text-blue-600 font-bold tracking-widest uppercase text-[10px] mb-2">Our Standards</h2>
+                        <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Safety-First Service</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <svg class="text-brand-yellow shrink-0 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900 mb-1">Licensed</h4>
+                                    <p class="text-[11px] text-slate-500">Certified Texas professionals.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <svg class="text-brand-yellow shrink-0 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900 mb-1">Local</h4>
+                                    <p class="text-[11px] text-slate-500">Proudly Houston based.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100 col-span-1 sm:col-span-2">
+                                <svg class="text-brand-yellow shrink-0 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900 mb-1">Clean & Reliable</h4>
+                                    <p class="text-[11px] text-slate-500">We respect your home and leave it tidy.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 bg-slate-900 p-4 rounded-2xl flex items-center justify-between">
+                            <div class="pl-2">
+                                <p class="text-slate-500 text-[10px] font-bold uppercase mb-0.5">Contact Us</p>
+                                <p class="text-white font-black text-lg">(713) 530-0865</p>
+                            </div>
+                            <a href="tel:7135300865" class="bg-brand-yellow text-slate-900 p-3 rounded-xl hover:scale-105 transition-transform">
+                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area -->
+        <section id="areas" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-500/10 blur-[120px] rounded-full"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-brand-yellow font-bold tracking-widest uppercase text-xs mb-3">Our Service Area</h2>
+                        <h3 class="text-3xl md:text-5xl font-extrabold mb-5">Proudly Serving Houston, TX</h3>
+                        <p class="text-slate-400 text-lg">Based at 9125 Airport Blvd, we provide rapid response to neighborhoods across the Southeast.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                        <div class="flex items-center space-x-2 bg-slate-800/50 p-3 rounded-lg border border-slate-700/50 text-sm">
+                            <svg class="text-brand-yellow shrink-0 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Southeast Houston</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-slate-800/50 p-3 rounded-lg border border-slate-700/50 text-sm">
+                            <svg class="text-brand-yellow shrink-0 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Pasadena</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-slate-800/50 p-3 rounded-lg border border-slate-700/50 text-sm">
+                            <svg class="text-brand-yellow shrink-0 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Deer Park</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-slate-800/50 p-3 rounded-lg border border-slate-700/50 text-sm">
+                            <svg class="text-brand-yellow shrink-0 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Pearland</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-yellow text-slate-900 rounded-[2rem] p-8 md:p-12 text-center shadow-xl">
+                        <h4 class="text-2xl md:text-3xl font-black mb-4 italic">In the Dark? Don't Wait.</h4>
+                        <p class="text-base md:text-lg font-bold mb-8 opacity-90">Our technicians are on standby 24 hours a day.</p>
+                        <a href="tel:7135300865" class="inline-flex items-center space-x-3 bg-slate-900 text-white px-10 py-4 rounded-xl font-black text-lg hover:bg-slate-800 transition-all transform hover:scale-105 shadow-lg">
+                            <span class="uppercase">Call (713) 530-0865</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h2 class="text-blue-600 font-bold tracking-widest uppercase text-[10px] mb-2">Support</h2>
+                        <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 mb-6">Common Questions</h3>
+                    </div>
+
+                    <div class="space-y-3">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item active bg-white rounded-2xl border border-brand-yellow shadow-sm overflow-hidden">
+                            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left font-bold text-slate-900">
+                                <span class="text-base md:text-lg pr-4">Are you a licensed electrician in Texas?</span>
+                                <svg class="faq-icon text-brand-yellow w-5 h-5 transition-transform shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-content px-5">
+                                <p class="text-slate-600 text-sm md:text-base">Yes, Perfection Electric of Texas is fully licensed and insured for all residential and commercial electrical work in the state of Texas.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden transition-all">
+                            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left font-bold text-slate-900">
+                                <span class="text-base md:text-lg pr-4">Do you provide emergency service after hours?</span>
+                                <svg class="faq-icon text-slate-400 w-5 h-5 transition-transform shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-content px-5">
+                                <p class="text-slate-600 text-sm md:text-base">Absolutely. We are open 24 hours a day, 7 days a week. If you have an electrical emergency in the Houston area, call us immediately at (713) 530-0865.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden transition-all">
+                            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left font-bold text-slate-900">
+                                <span class="text-base md:text-lg pr-4">How do I know if I need a panel upgrade?</span>
+                                <svg class="faq-icon text-slate-400 w-5 h-5 transition-transform shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-content px-5">
+                                <p class="text-slate-600 text-sm md:text-base">Common signs include flickering lights, frequently tripping breakers, or the need to use multiple power strips for basic appliances. We can perform a safety audit to confirm.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900 pb-24 md:pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div class="col-span-1">
+                    <div class="flex items-center space-x-2 mb-5">
+                        <svg class="text-brand-yellow w-7 h-7 fill-current shrink-0" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <div class="flex flex-col">
+                            <span class="font-extrabold text-lg uppercase tracking-tighter text-white">Perfection Electric</span>
+                            <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-brand-yellow">of Texas</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">Your safety is our priority. Professional electrical services in Houston, TX since 2011. Open 24/7 for your convenience.</p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-5">Quick Links</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="hover:text-brand-yellow transition-colors">Services</a></li>
+                        <li><a href="#areas" class="hover:text-brand-yellow transition-colors">Service Area</a></li>
+                        <li><a href="#faq" class="hover:text-brand-yellow transition-colors">FAQ</a></li>
+                        <li><a href="tel:7135300865" class="text-white font-bold italic">24/7 Emergency Dispatch</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-5">Contact Info</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <svg class="text-brand-yellow shrink-0 mt-0.5 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>9125 Airport Blvd Suite C2,<br>Houston, TX 77061</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="text-brand-yellow shrink-0 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:7135300865" class="text-white font-bold">(713) 530-0865</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-5">Status</h5>
+                    <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-slate-300 text-xs">Mon - Sun</span>
+                            <span class="bg-emerald-500/10 text-emerald-500 text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">Open</span>
+                        </div>
+                        <p class="text-white font-black text-xl uppercase tracking-tight">24 Hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest font-bold text-slate-600 uppercase">
+                <p>© 2024 Perfection Electric of Texas.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Call Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-[60] px-4 pb-4 md:hidden">
+        <a href="tel:7135300865" class="flex items-center justify-center space-x-3 w-full bg-brand-yellow text-slate-900 h-14 rounded-xl shadow-2xl font-black text-lg uppercase tracking-tight active:scale-95 transition-transform border-b-4 border-yellow-600">
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call: (713) 530-0865</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Header Scroll Effect
+        const header = document.getElementById('main-header');
+        const logoText = document.getElementById('logo-text');
+        const logoSubtext = document.getElementById('logo-subtext');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+                header.classList.remove('bg-white/80');
+                logoText.classList.replace('text-slate-900', 'text-white');
+                logoSubtext.classList.replace('text-slate-500', 'text-brand-yellow');
+                navLinks.forEach(link => link.classList.replace('text-slate-700', 'text-slate-300'));
+            } else {
+                header.classList.remove('header-scrolled');
+                header.classList.add('bg-white/80');
+                logoText.classList.replace('text-white', 'text-slate-900');
+                logoSubtext.classList.replace('text-brand-yellow', 'text-slate-500');
+                navLinks.forEach(link => link.classList.replace('text-slate-300', 'text-slate-700'));
+            }
+        });
+
+        // FAQ Accordion
+        const faqTriggers = document.querySelectorAll('.faq-trigger');
+        faqTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const icon = trigger.querySelector('.faq-icon');
+                
+                // Toggle active class
+                const isActive = item.classList.contains('active');
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('active');
+                    el.classList.replace('border-brand-yellow', 'border-slate-200');
+                    el.classList.remove('shadow-md');
+                    const otherIcon = el.querySelector('.faq-icon');
+                    if(otherIcon) otherIcon.classList.replace('text-brand-yellow', 'text-slate-400');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.classList.replace('border-slate-200', 'border-brand-yellow');
+                    item.classList.add('shadow-md');
+                    icon.classList.replace('text-slate-400', 'text-brand-yellow');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
